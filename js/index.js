@@ -1,9 +1,6 @@
 //===========================================
-// Thx Valentin's Pen for reference
-// http://codepen.io/asstor_/pen/MYMZZK
-//http://tympanus.net/Tutorials/CircularProgressButton/
 //spinning confirmed effect
-
+// Thx Valentin's Pen for reference http://codepen.io/asstor_/pen/MYMZZK http://tympanus.net/Tutorials/CircularProgressButton/
 $(function() {
   $("#confirmed").click(function() {
     $("#confirmed").addClass("onclic", 250, validate);
@@ -22,10 +19,11 @@ $(function() {
     }, 2450);
   }
 });
+//End of spinning confirmed effect
 
-//Thx Mason Fox's Pen for reference ====================================================
-//http://codepen.io/masonfox/pen/OymYMa?editors=1010
+//====================================================
 //View all toggle
+//Thx Mason Fox's Pen for reference http://codepen.io/masonfox/pen/OymYMa?editors=1010
 $('.view-all').click(function(){
   $('.education-content').slideToggle('fast');
   $('.reply').toggle();
@@ -33,11 +31,11 @@ $('.view-all').click(function(){
                return v == ' View All 5 Connections' ? ' View Less' : ' View All 5 Connections'
   });
 });
-
+//End of View all toggle
 
 //=====================================================
 //Date Picker
-// thx for Ashley's pen http://codepen.io/aktorou/pen/MymKoB?editors=0110
+//thx for Ashley's pen http://codepen.io/aktorou/pen/MymKoB?editors=0110
 $(function() {
   $( ".calendar" ).datepicker({
 		dateFormat: 'mm/dd/yy',
@@ -57,3 +55,4 @@ $(function() {
 		$parent.find('.result').children('span').html($selected);
 	});
 });
+//End of Date Picker
