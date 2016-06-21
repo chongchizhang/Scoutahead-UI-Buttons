@@ -2,6 +2,7 @@
 // Thx Valentin's Pen for reference
 // http://codepen.io/asstor_/pen/MYMZZK
 //http://tympanus.net/Tutorials/CircularProgressButton/
+//spinning confirmed effect
 
 $(function() {
   $("#confirmed").click(function() {
@@ -22,13 +23,37 @@ $(function() {
   }
 });
 
-//Thx Mason Fox's Pen for reference
+//Thx Mason Fox's Pen for reference ====================================================
 //http://codepen.io/masonfox/pen/OymYMa?editors=1010
-
+//View all toggle
 $('.view-all').click(function(){
   $('.education-content').slideToggle('fast');
   $('.reply').toggle();
   $('.text').text(function(i, v){
                return v == ' View All 5 Connections' ? ' View Less' : ' View All 5 Connections'
   });
+});
+
+
+//=====================================================
+//Date Picker
+// thx for Ashley's pen http://codepen.io/aktorou/pen/MymKoB?editors=0110
+$(function() {
+  $( ".calendar" ).datepicker({
+		dateFormat: 'mm/dd/yy',
+		firstDay: 1
+	});
+	
+	$(document).on('click', '.date-picker .input', function(e){
+		var $me = $(this),
+				$parent = $me.parents('.date-picker');
+		$parent.toggleClass('open');
+	});
+	
+	$(".calendar").on("change",function(){
+		var $me = $(this),
+				$selected = $me.val(),
+				$parent = $me.parents('.date-picker');
+		$parent.find('.result').children('span').html($selected);
+	});
 });

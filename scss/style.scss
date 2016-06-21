@@ -16,6 +16,7 @@ $SOrange: #fce4bd;
 $base-unit: 40px;
 html {
   box-sizing: border-box;
+  font-family: sans-serif; 
 }
 
 *,
@@ -292,7 +293,176 @@ section {
   }
 }
 
-iframe {
-  width: 100%;
-  height: 1024px; 
+//====================================================
+// Date picker 
+// thx for Ashley's pen http://codepen.io/aktorou/pen/MymKoB?editors=0110
+
+.date-picker {
+  margin: 100px auto;
+  border-radius: 4px;
+  width: 300px;
+  height: auto;
+  max-height: 50px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s 0s ease-in-out;
+  transition: all 0.3s 0s ease-in-out;
+
+  .input {
+    width: 100%;
+    height: 50px;
+    font-size: 0;
+    cursor: pointer;
+
+    .result, button {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .result {
+      width: calc(100% - 50px);
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      padding: 0 10px;
+      color: grey;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      background-color: #40b1bd;
+      color: white;
+      line-height: 50px;
+      border: 0;
+      font-size: 18px;
+      padding: 0;
+
+      &:hover {
+        background-color: #30a4b1;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  .calendar {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+
+  .ui-datepicker-inline {
+    position: relative;
+    width: 100%;
+  }
+
+  .ui-datepicker-header {
+    height: 100%;
+    line-height: 50px;
+    background: #40b1bd;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .ui-datepicker-prev, .ui-datepicker-next {
+    width: 20px;
+    height: 20px;
+    text-indent: 9999px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+
+  .ui-datepicker-prev {
+    float: left;
+    margin-left: 12px;
+
+    &:after {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin: -43px 0px 0px 8px;
+    }
+  }
+
+  .ui-datepicker-next {
+    float: right;
+    margin-right: 12px;
+
+    &:after {
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      margin: -43px 0px 0px 6px;
+    }
+  }
+
+  .ui-datepicker-prev:after, .ui-datepicker-next:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  .ui-datepicker-prev:hover, .ui-datepicker-next:hover, .ui-datepicker-prev:hover:after, .ui-datepicker-next:hover:after {
+    border-color: #30a4b1;
+  }
+
+  .ui-datepicker-title {
+    text-align: center;
+  }
+
+  .ui-datepicker-calendar {
+    width: 100%;
+    text-align: center;
+
+    thead tr th span {
+      display: block;
+      width: 100%;
+      color: #40b1bd;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+  }
+
+  .ui-state-default {
+    display: block;
+    text-decoration: none;
+    color: #b5b5b5;
+    line-height: 40px;
+    font-size: 12px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+  }
+
+  .ui-state-highlight {
+    color: #30a4b1;
+  }
+
+  .ui-state-active {
+    color: #30a4b1;
+    background-color: rgba(131, 146, 167, 0.12);
+    font-weight: 600;
+  }
+
+  .ui-datepicker-unselectable .ui-state-default {
+    color: #eee;
+    border: 2px solid transparent;
+  }
+
+  &.open {
+    max-height: 400px;
+  }
 }
