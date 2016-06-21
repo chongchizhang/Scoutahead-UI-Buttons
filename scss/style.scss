@@ -1,19 +1,33 @@
 /* 
-Primary Green: $PGreen; 
+Primary Green: #8ab255; 
 Secondary Green: #6f9142; 
-Primary Blue: $PBlue;
+Primary Blue: #40b1bd;
 Secondary Blue: #30a4b1;
 Primary Orange: #POrange; 
 Secondary Orange: #fce4bd;
 */
-
 $PGreen: #8ab255;
 $SGreen: #6f9142;
 $PBlue: #40b1bd;
 $SBlue: #30a4b1;
 $POrange: #f5a623;
 $SOrange: #fce4bd;
+
 $base-unit: 40px;
+
+%button {
+  outline: none;
+  margin: 10px;
+  background-color: $PGreen;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
 html {
   box-sizing: border-box;
   font-family: sans-serif; 
@@ -40,20 +54,11 @@ section {
 }
 
 .button {
-  outline: none;
-  margin: 10px;
-  background-color: $PGreen;
-  border: none;
-  color: white;
-  width: 200px;
-  height: 50px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  @extend %button; 
 }
 
 .signup-main {
-  @extend .button;
+  @extend %button;
   border: solid 1px;
   border-color: $SGreen;
   &:hover {
@@ -62,20 +67,20 @@ section {
 }
 
 .login {
-  @extend .button;
+  @extend %button;
   &:hover {
-    background-color: #6f9142;
+    background-color: #SGreen;
   }
 }
 
 .save-image:hover,
 .update-pw:hover,
 .add-email:hover {
-  background-color: #6f9142;
+  background-color: #SGreen;
 }
 
 .signup {
-  @extend .button;
+  @extend %button;
   background-color: Transparent;
   color: $PGreen;
   border: solid 1px $PGreen;
@@ -109,11 +114,11 @@ section {
 
 .submit,
 .send {
-  @extend .button;
+  @extend %button;
   width: 90px;
   height: $base-unit;
   &:hover {
-    background-color: #6f9142;
+    background-color: #SGreen;
   }
 }
 
@@ -150,7 +155,7 @@ section {
 
 .student,
 .professional {
-  @extend .button;
+  @extend %button;
   background-color: grey;
   &:hover {
     background-color: $PBlue;
@@ -158,7 +163,7 @@ section {
 }
 
 .home {
-  @extend .button;
+  @extend %button;
   margin: 10px auto 20px;
   width: $base-unit;
   height: $base-unit;
@@ -174,7 +179,7 @@ section {
 }
 
 .dismiss {
-  @extend .button;
+  @extend %button;
   @extend .home;
   border: none;
   color: $POrange;
@@ -185,7 +190,7 @@ section {
 }
 
 .select-image {
-  @extend .button;
+  @extend %button;
   background-color: Transparent;
   border: solid 1px $PGreen;
   color: $PGreen;
@@ -198,21 +203,20 @@ section {
 .add-email,
 .save-image,
 .select-image {
-  @extend .button;
+  @extend %button;
   width: 100px;
   height: $base-unit;
 }
 
 .update-pw {
-  @extend .button;
+  @extend %button;
   width: 130px;
   height: 40px
 }
 
 //===========================================
-// Thx Valentin's Pen for reference
-// http://codepen.io/asstor_/pen/MYMZZK
 // The Confirmed button Style
+// Thx Valentin's Pen for reference http://codepen.io/asstor_/pen/MYMZZK
 .confirm-button {
   border-radius: 4px;
   border: 1px solid $PGreen;
@@ -261,8 +265,7 @@ section {
     transform: rotate(360deg);
   }
 }
-
-// The Confirmed button Style
+//End of Confirm button
 //===========================================
 
 .education-wrapper {
@@ -273,7 +276,7 @@ section {
   display: none; 
 }
 .view-all {
-  @extend .button;
+  @extend %button;
   background-color: $PBlue;
   height: 30px; 
   margin: 0;
@@ -285,7 +288,7 @@ section {
 }
 
 .connect, .request, .review {
-  @extend .button;
+  @extend %button;
   background-color: $PBlue; 
   height: 40px; 
   &:hover {
@@ -466,3 +469,4 @@ section {
     max-height: 400px;
   }
 }
+//End of Date Picker

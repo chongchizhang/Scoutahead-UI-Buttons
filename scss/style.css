@@ -1,0 +1,344 @@
+/* 
+Primary Green: #8ab255; 
+Secondary Green: #6f9142; 
+Primary Blue: #40b1bd;
+Secondary Blue: #30a4b1;
+Primary Orange: #POrange; 
+Secondary Orange: #fce4bd;
+*/
+.button, .signup-main, .login, .signup, .submit,
+.send, .student,
+.professional, .home, .dismiss, .select-image, .add-email,
+.save-image, .update-pw, .view-all, .connect, .request, .review {
+  outline: none;
+  margin: 10px;
+  background-color: #8ab255;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease; }
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  text-align: center; }
+
+section {
+  padding: 20px;
+  border-bottom: solid 1px #d6d6d6;
+  border-top: solid 1px white;
+  width: 90vw;
+  margin: 0 auto; }
+
+.signup-main {
+  border: solid 1px;
+  border-color: #6f9142; }
+  .signup-main:hover {
+    background-color: #6f9142; }
+
+.login:hover {
+  background-color: #SGreen; }
+
+.save-image:hover,
+.update-pw:hover,
+.add-email:hover {
+  background-color: #SGreen; }
+
+.signup {
+  background-color: Transparent;
+  color: #8ab255;
+  border: solid 1px #8ab255; }
+  .signup:hover {
+    background-color: #8ab255;
+    color: white; }
+
+.social {
+  margin: 10px auto 20px;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #8ab255;
+  border-radius: 4px;
+  background-color: Transparent;
+  cursor: pointer;
+  font-size: 18pt;
+  line-height: 1.45;
+  color: #8ab255; }
+  .social:hover {
+    background: #8ab255;
+    color: white; }
+
+.fa-stack-1x,
+.fa-stack-2x {
+  position: inherit; }
+
+.submit,
+.send {
+  width: 90px;
+  height: 40px; }
+  .submit:hover,
+  .send:hover {
+    background-color: #SGreen; }
+
+.facebook,
+.twitter {
+  margin: 10px auto;
+  height: 38px;
+  padding: 10px;
+  border-radius: 4px;
+  width: 120px;
+  font-weight: 100;
+  font-family: sans-serif; }
+
+.facebook {
+  border: solid 1px #3b5998;
+  color: #3b5998;
+  cursor: pointer; }
+  .facebook:hover {
+    background: #3b5998;
+    color: white; }
+
+.twitter {
+  border: solid 1px #1da1f2;
+  color: #1da1f2;
+  cursor: pointer; }
+  .twitter:hover {
+    background: #1da1f2;
+    color: white; }
+
+.student,
+.professional {
+  background-color: grey; }
+  .student:hover,
+  .professional:hover {
+    background-color: #40b1bd; }
+
+.home, .dismiss {
+  margin: 10px auto 20px;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #40b1bd;
+  background-color: Transparent;
+  color: #40b1bd;
+  font-size: 18pt;
+  line-height: 1.4; }
+  .home:hover, .dismiss:hover {
+    background-color: #40b1bd;
+    color: white; }
+
+.dismiss {
+  border: none;
+  color: #f5a623; }
+  .dismiss:hover {
+    background-color: #f5a623;
+    color: white; }
+
+.select-image {
+  background-color: Transparent;
+  border: solid 1px #8ab255;
+  color: #8ab255; }
+  .select-image:hover {
+    background-color: #8ab255;
+    color: white; }
+
+.add-email,
+.save-image,
+.select-image {
+  width: 100px;
+  height: 40px; }
+
+.update-pw {
+  width: 130px;
+  height: 40px; }
+
+.confirm-button {
+  border-radius: 4px;
+  border: 1px solid #8ab255;
+  color: white;
+  cursor: pointer; }
+  .confirm-button:hover {
+    background: #6f9142;
+    border: 1px solid #6f9142; }
+
+.onclic {
+  background-color: Transparent;
+  width: 40px;
+  border-color: lightgrey;
+  border-width: 3px;
+  border-radius: 44px;
+  color: Transparent;
+  border-left-color: #8ab255;
+  animation: rotating 2s 0.25s linear infinite; }
+  .onclic:hover {
+    background: Transparent;
+    border-width: 3px;
+    border-color: lightgrey;
+    border-left-color: #8ab255; }
+
+.validate {
+  color: #8ab255;
+  background: Transparent; }
+  .validate:after {
+    font-family: 'FontAwesome';
+    content: " \f00c"; }
+  .validate:hover {
+    background: Transparent; }
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.education-wrapper {
+  margin: 50px auto; }
+
+.education-content {
+  padding: 20px;
+  display: none; }
+
+.view-all {
+  background-color: #40b1bd;
+  height: 30px;
+  margin: 0;
+  transition: all 500ms ease-in-out; }
+  .view-all .reply {
+    color: white;
+    display: none; }
+
+.connect, .request, .review {
+  background-color: #40b1bd;
+  height: 40px; }
+  .connect:hover, .request:hover, .review:hover {
+    background-color: #30a4b1; }
+
+.date-picker {
+  margin: 100px auto;
+  border-radius: 4px;
+  width: 300px;
+  height: auto;
+  max-height: 50px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s 0s ease-in-out;
+  transition: all 0.3s 0s ease-in-out; }
+  .date-picker .input {
+    width: 100%;
+    height: 50px;
+    font-size: 0;
+    cursor: pointer; }
+    .date-picker .input .result, .date-picker .input button {
+      display: inline-block;
+      vertical-align: top; }
+    .date-picker .input .result {
+      width: calc(100% - 50px);
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      padding: 0 10px;
+      color: grey;
+      box-sizing: border-box; }
+    .date-picker .input button {
+      width: 50px;
+      height: 50px;
+      background-color: #40b1bd;
+      color: white;
+      line-height: 50px;
+      border: 0;
+      font-size: 18px;
+      padding: 0; }
+      .date-picker .input button:hover {
+        background-color: #30a4b1; }
+      .date-picker .input button:focus {
+        outline: 0; }
+  .date-picker .calendar {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    overflow: hidden; }
+  .date-picker .ui-datepicker-inline {
+    position: relative;
+    width: 100%; }
+  .date-picker .ui-datepicker-header {
+    height: 100%;
+    line-height: 50px;
+    background: #40b1bd;
+    color: #fff;
+    margin-bottom: 10px; }
+  .date-picker .ui-datepicker-prev, .date-picker .ui-datepicker-next {
+    width: 20px;
+    height: 20px;
+    text-indent: 9999px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 12px; }
+  .date-picker .ui-datepicker-prev {
+    float: left;
+    margin-left: 12px; }
+    .date-picker .ui-datepicker-prev:after {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin: -43px 0px 0px 8px; }
+  .date-picker .ui-datepicker-next {
+    float: right;
+    margin-right: 12px; }
+    .date-picker .ui-datepicker-next:after {
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      margin: -43px 0px 0px 6px; }
+  .date-picker .ui-datepicker-prev:after, .date-picker .ui-datepicker-next:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff; }
+  .date-picker .ui-datepicker-prev:hover, .date-picker .ui-datepicker-next:hover, .date-picker .ui-datepicker-prev:hover:after, .date-picker .ui-datepicker-next:hover:after {
+    border-color: #30a4b1; }
+  .date-picker .ui-datepicker-title {
+    text-align: center; }
+  .date-picker .ui-datepicker-calendar {
+    width: 100%;
+    text-align: center; }
+    .date-picker .ui-datepicker-calendar thead tr th span {
+      display: block;
+      width: 100%;
+      color: #40b1bd;
+      margin-bottom: 5px;
+      font-size: 13px; }
+  .date-picker .ui-state-default {
+    display: block;
+    text-decoration: none;
+    color: #b5b5b5;
+    line-height: 40px;
+    font-size: 12px; }
+    .date-picker .ui-state-default:hover {
+      background: rgba(0, 0, 0, 0.02); }
+  .date-picker .ui-state-highlight {
+    color: #30a4b1; }
+  .date-picker .ui-state-active {
+    color: #30a4b1;
+    background-color: rgba(131, 146, 167, 0.12);
+    font-weight: 600; }
+  .date-picker .ui-datepicker-unselectable .ui-state-default {
+    color: #eee;
+    border: 2px solid transparent; }
+  .date-picker.open {
+    max-height: 400px; }
+
+/*# sourceMappingURL=style.css.map */
