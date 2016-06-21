@@ -1,0 +1,298 @@
+/* 
+Primary Green: $PGreen; 
+Secondary Green: #6f9142; 
+Primary Blue: $PBlue;
+Secondary Blue: #30a4b1;
+Primary Orange: #POrange; 
+Secondary Orange: #fce4bd;
+*/
+
+$PGreen: #8ab255;
+$SGreen: #6f9142;
+$PBlue: #40b1bd;
+$SBlue: #30a4b1;
+$POrange: #f5a623;
+$SOrange: #fce4bd;
+$base-unit: 40px;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  border-bottom: solid 1px #d6d6d6;
+  border-top: solid 1px white;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.button {
+  outline: none;
+  margin: 10px;
+  background-color: $PGreen;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.signup-main {
+  @extend .button;
+  border: solid 1px;
+  border-color: $SGreen;
+  &:hover {
+    background-color: $SGreen;
+  }
+}
+
+.login {
+  @extend .button;
+  &:hover {
+    background-color: #6f9142;
+  }
+}
+
+.save-image:hover,
+.update-pw:hover,
+.add-email:hover {
+  background-color: #6f9142;
+}
+
+.signup {
+  @extend .button;
+  background-color: Transparent;
+  color: $PGreen;
+  border: solid 1px $PGreen;
+  &:hover {
+    background-color: $PGreen;
+    color: white;
+  }
+}
+
+.social {
+  margin: 10px auto 20px;
+  width: $base-unit;
+  height: $base-unit;
+  border: solid 1px $PGreen;
+  border-radius: 4px;
+  background-color: Transparent;
+  cursor: pointer;
+  font-size: 18pt;
+  line-height: 1.45;
+  color: $PGreen;
+  &:hover {
+    background: $PGreen;
+    color: white;
+  }
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  position: inherit;
+}
+
+.submit,
+.send {
+  @extend .button;
+  width: 90px;
+  height: $base-unit;
+  &:hover {
+    background-color: #6f9142;
+  }
+}
+
+.facebook,
+.twitter {
+  margin: 10px auto;
+  height: 38px;
+  padding: 10px;
+  border-radius: 4px;
+  width: 120px;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+
+.facebook {
+  border: solid 1px #3b5998;
+  color: #3b5998;
+  cursor: pointer;
+  &:hover {
+    background: #3b5998;
+    color: white;
+  }
+}
+
+.twitter {
+  border: solid 1px #1da1f2;
+  color: #1da1f2;
+  cursor: pointer;
+  &:hover {
+    background: #1da1f2;
+    color: white;
+  }
+}
+
+.student,
+.professional {
+  @extend .button;
+  background-color: grey;
+  &:hover {
+    background-color: $PBlue;
+  }
+}
+
+.home {
+  @extend .button;
+  margin: 10px auto 20px;
+  width: $base-unit;
+  height: $base-unit;
+  border: solid 1px $PBlue;
+  background-color: Transparent;
+  color: $PBlue;
+  font-size: 18pt;
+  line-height: 1.4;
+  &:hover {
+    background-color: $PBlue;
+    color: white;
+  }
+}
+
+.dismiss {
+  @extend .button;
+  @extend .home;
+  border: none;
+  color: $POrange;
+  &:hover {
+    background-color: $POrange;
+    color: white;
+  }
+}
+
+.select-image {
+  @extend .button;
+  background-color: Transparent;
+  border: solid 1px $PGreen;
+  color: $PGreen;
+  &:hover {
+    background-color: $PGreen;
+    color: white;
+  }
+}
+
+.add-email,
+.save-image,
+.select-image {
+  @extend .button;
+  width: 100px;
+  height: $base-unit;
+}
+
+.update-pw {
+  @extend .button;
+  width: 130px;
+  height: 40px
+}
+
+//===========================================
+// Thx Valentin's Pen for reference
+// http://codepen.io/asstor_/pen/MYMZZK
+// The Confirmed button Style
+.confirm-button {
+  border-radius: 4px;
+  border: 1px solid $PGreen;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: $SGreen;
+    border: 1px solid $SGreen;
+  }
+}
+
+.onclic {
+  background-color: Transparent;
+  width: 40px;
+  border-color: lightgrey;
+  border-width: 3px;
+  border-radius: 44px;
+  color: Transparent;
+  border-left-color: $PGreen;
+  animation: rotating 2s 0.25s linear infinite;
+  &:hover {
+    background: Transparent;
+    border-width: 3px;
+    border-color: lightgrey;
+    border-left-color: $PGreen;
+  }
+}
+
+.validate {
+  color: $PGreen;
+  background: Transparent;
+  &:after {
+    font-family: 'FontAwesome';
+    content: " \f00c";
+  }
+  &:hover {
+    background: Transparent;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// The Confirmed button Style
+//===========================================
+
+.education-wrapper {
+  margin: 50px auto; 
+}
+.education-content {
+  padding: 20px;
+  display: none; 
+}
+.view-all {
+  @extend .button;
+  background-color: $PBlue;
+  height: 30px; 
+  margin: 0;
+  transition: all 500ms ease-in-out;
+  .reply {
+    color: white;
+    display: none; 
+  }
+}
+
+.connect, .request, .review {
+  @extend .button;
+  background-color: $PBlue; 
+  height: 40px; 
+  &:hover {
+    background-color: $SBlue;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 1024px; 
+}
